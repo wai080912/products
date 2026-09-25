@@ -8,11 +8,11 @@
 :root{--navy:#0a1a2f;--gold:#c9a45c;--gold-d:#a8843f;--ink:#1d2733;--mut:#68727f;--bg:#f7f5f0}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Inter,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
-.hero{background:radial-gradient(120% 140% at 50% 0%,#14304f 0%,var(--navy) 60%,#060d18 100%);color:#fff;padding:64px 20px 40px;text-align:center}
+.hero{background:radial-gradient(120% 140% at 50% 0%,#14304f 0%,var(--navy) 60%,#060d18 100%);color:#fff;padding:52px 20px 34px;text-align:center}
 .hero .kicker{letter-spacing:.35em;font-size:12px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
 .hero h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(34px,7vw,54px);font-weight:700;line-height:1.15}
 .hero h1 em{color:var(--gold);font-style:normal}
-.hero p{margin:16px auto 26px;max-width:520px;color:#b9c4d1;font-size:17px;line-height:1.7}
+.hero .search{margin-top:26px}
 .search{max-width:560px;margin:0 auto;position:relative}
 .search input{width:100%;font-size:18px;padding:16px 20px 16px 52px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;outline:none}
 .search input::placeholder{color:#8fa0b3}
@@ -32,9 +32,9 @@ body{font-family:Inter,-apple-system,"Segoe UI",sans-serif;background:var(--bg);
 .imgwrap img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .4s}
 .card:hover .imgwrap img{transform:scale(1.04)}
 .cbody{padding:16px 16px 20px}
-.ccat{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:8px}
-.cbody h3{font-size:20px;font-weight:700;line-height:1.35}
-.spec{font-size:15px;color:var(--ink);margin-top:8px;line-height:1.55}
+.ccat{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cbody h3{font-size:20px;font-weight:700;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.spec{font-size:15px;color:var(--ink);margin-top:8px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:3.1em}
 .code{font-size:12.5px;color:#a09a8b;margin-top:8px;letter-spacing:.1em}
 .card.hide{display:none}
 .empty{text-align:center;color:var(--mut);padding:60px 20px;font-size:17px;display:none}
@@ -57,7 +57,6 @@ footer .rule{width:56px;height:2px;background:var(--gold);margin:0 auto 16px}
 <section class="hero">
   <div class="kicker">Premium Seafood</div>
   <h1>Seafood <em>Product Catalog</em></h1>
-  <p>Hand-selected cuts, portioned and packed for food service. Tap any product for details.</p>
   <div class="search">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
     <input id="q" placeholder="Search code or product name...">
@@ -170,7 +169,7 @@ footer .rule{width:56px;height:2px;background:var(--gold);margin:0 auto 16px}
   </div>
   <div class="empty" id="empty">No products match — try another keyword.</div>
 </div>
-<footer><div class="rule"></div>25 PRODUCTS · IMAGES FOR REFERENCE ONLY</footer>
+<footer><div class="rule"></div></footer>
 <div class="modal" id="modal"><div class="scrim"></div>
   <div class="sheet">
     <button class="close" id="close">✕</button>
