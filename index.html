@@ -2,163 +2,200 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seafood Product Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+:root{--navy:#0a1a2f;--gold:#c9a45c;--gold-d:#a8843f;--ink:#1d2733;--mut:#68727f;--bg:#f7f5f0}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:#f5f5f5;color:#222;padding-bottom:40px}
-header{background:#0b6e4f;color:#fff;padding:28px 16px;text-align:center;position:sticky;top:0;z-index:10}
-header h1{font-size:28px;margin-bottom:12px}
-#q{width:100%;max-width:560px;font-size:20px;padding:14px 16px;border:none;border-radius:12px}
-.filters{display:flex;gap:10px;overflow-x:auto;padding:14px 16px;background:#fff;position:sticky;top:118px;z-index:9}
-.fbtn{flex:0 0 auto;font-size:18px;padding:10px 20px;border:2px solid #0b6e4f;background:#fff;color:#0b6e4f;border-radius:999px}
-.fbtn.on{background:#0b6e4f;color:#fff}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;padding:16px}
-.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
-.card .code{font-size:19px;font-weight:700;padding:10px 12px 2px}
-.card .desc{font-size:15px;color:#555;padding:0 12px 14px;line-height:1.5}
+body{font-family:Inter,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.hero{background:radial-gradient(120% 140% at 50% 0%,#14304f 0%,var(--navy) 60%,#060d18 100%);color:#fff;padding:64px 20px 40px;text-align:center}
+.hero .kicker{letter-spacing:.35em;font-size:12px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(34px,7vw,54px);font-weight:700;line-height:1.15}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{margin:16px auto 26px;max-width:520px;color:#b9c4d1;font-size:17px;line-height:1.7}
+.search{max-width:560px;margin:0 auto;position:relative}
+.search input{width:100%;font-size:18px;padding:16px 20px 16px 52px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;outline:none}
+.search input::placeholder{color:#8fa0b3}
+.search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);opacity:.6}
+.bar{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid #e8e2d6}
+.pills{display:flex;gap:10px;overflow-x:auto;padding:14px 18px;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pill{flex:0 0 auto;font-size:15px;font-weight:500;padding:10px 22px;border-radius:999px;border:1px solid #d8d0bd;background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
+.pill.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.wrap{max-width:1200px;margin:0 auto;padding:26px 18px 10px}
+.count{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:6px 4px 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:20px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}}
+.card{background:#fff;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 4px 18px rgba(10,26,47,.07);transition:transform .25s,box-shadow .25s;border:1px solid #efe9da}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(10,26,47,.14)}
+.imgwrap{aspect-ratio:1;overflow:hidden;background:#fff}
+.imgwrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .imgwrap img{transform:scale(1.05)}
+.cbody{padding:16px 16px 20px}
+.ccat{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:8px}
+.cbody h3{font-size:19px;font-weight:600;letter-spacing:.02em}
+.cbody p{font-size:14.5px;color:var(--mut);margin-top:6px;line-height:1.55}
 .card.hide{display:none}
-#n{text-align:center;color:#888;font-size:17px;padding:10px}
-footer{text-align:center;color:#999;font-size:14px;padding:24px}
+.empty{text-align:center;color:var(--mut);padding:60px 20px;font-size:17px;display:none}
+footer{text-align:center;padding:44px 20px;color:#a09a8b;font-size:13.5px;letter-spacing:.06em}
+footer .rule{width:56px;height:2px;background:var(--gold);margin:0 auto 16px}
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:flex-end;justify-content:center}
+.modal.open{display:flex}
+.scrim{position:absolute;inset:0;background:rgba(6,13,24,.6);backdrop-filter:blur(3px)}
+.sheet{position:relative;background:#fff;width:100%;max-width:640px;max-height:92vh;overflow:auto;border-radius:24px 24px 0 0;animation:up .3s ease}
+@media(min-width:700px){.modal{align-items:center;padding:24px}.sheet{border-radius:24px}}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.sheet img{width:100%;aspect-ratio:1.4;object-fit:cover;display:block}
+.sheet .pad{padding:26px 26px 34px}
+.sheet .ccat{font-size:12px}
+.sheet h2{font-family:"Playfair Display",Georgia,serif;font-size:30px;margin:8px 0 4px}
+.sheet .code{font-size:15px;color:var(--gold-d);font-weight:600;letter-spacing:.08em}
+.sheet .spec{margin-top:14px;font-size:16.5px;line-height:1.7;color:var(--ink);background:var(--bg);border-radius:12px;padding:14px 16px}
+.close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:none;background:rgba(10,26,47,.55);color:#fff;font-size:20px;cursor:pointer}
 </style></head><body>
-<header><h1>🐟 Seafood Product Catalog</h1><input id="q" placeholder="Search code or product name..."></header>
-<div class="filters"><button class="fbtn on" data-f="All">All</button><button class="fbtn" data-f="Salmon">Salmon</button><button class="fbtn" data-f="Red Snapper">Red Snapper</button><button class="fbtn" data-f="Barramundi">Barramundi</button><button class="fbtn" data-f="Batang">Batang</button><button class="fbtn" data-f="Angoli">Angoli</button><button class="fbtn" data-f="Halibut">Halibut</button><button class="fbtn" data-f="Pomfret & Threadfin">Pomfret & Threadfin</button><button class="fbtn" data-f="Sutchi">Sutchi</button><button class="fbtn" data-f="Snakehead">Snakehead</button><button class="fbtn" data-f="Crab">Crab</button><button class="fbtn" data-f="Stingray">Stingray</button><button class="fbtn" data-f="Fish Roe">Fish Roe</button></div>
-<div class="grid">
-<div class="card" data-cat="Salmon" data-search="smx0075020 mt cook nz king salmon sq cut ptn (30ea x 150 g)">
-      <img loading="lazy" src="images/SMX0075020.webp" alt="SMX0075020">
-      <div class="code">SMX0075020</div>
-      <div class="desc">Mt Cook NZ King Salmon Sq Cut Ptn (30ea x 150 g)</div>
-    </div>
-<div class="card" data-cat="Salmon" data-search="smx0071020 nz king salmon square cut portion (60ea x 150 g)">
-      <img loading="lazy" src="images/SMX0071020.webp" alt="SMX0071020">
-      <div class="code">SMX0071020</div>
-      <div class="desc">NZ King Salmon Square Cut Portion (60ea x 150 g)</div>
-    </div>
-<div class="card" data-cat="Salmon" data-search="smx0006sfz serve salmon portion (tp, 2s x 120g, 60ea x 240 g)">
-      <img loading="lazy" src="images/SMX0006SFZ.webp" alt="SMX0006SFZ">
-      <div class="code">SMX0006SFZ</div>
-      <div class="desc">Serve Salmon Portion (TP, 2s x 120g, 60ea x 240 g)</div>
-    </div>
-<div class="card" data-cat="Salmon" data-search="smx0020020 nz king salmon s-cut portion (tp, 60ea x 200 g)">
-      <img loading="lazy" src="images/SMX0020020.webp" alt="SMX0020020">
-      <div class="code">SMX0020020</div>
-      <div class="desc">NZ King Salmon S-Cut Portion (TP, 60ea x 200 g)</div>
-    </div>
-<div class="card" data-cat="Salmon" data-search="nsx0008020 ul rm nor salmon s-cut portion (60ea x 190 g)">
-      <img loading="lazy" src="images/NSX0008020.webp" alt="NSX0008020">
-      <div class="code">NSX0008020</div>
-      <div class="desc">UL RM Nor Salmon S-Cut Portion (60ea x 190 g)</div>
-    </div>
-<div class="card" data-cat="Red Snapper" data-search="crx0001sfz ul serve crimson snapper ggs (15ea x 400 g)">
-      <img loading="lazy" src="images/CRX0001SFZ.webp" alt="CRX0001SFZ">
-      <div class="code">CRX0001SFZ</div>
-      <div class="desc">UL Serve Crimson Snapper GGS (15ea x 400 g)</div>
-    </div>
-<div class="card" data-cat="Red Snapper" data-search="crx0010020 crimson snapper portion 180/220g (ivp, 1x50ea)">
-      <img loading="lazy" src="images/CRX0010020.webp" alt="CRX0010020">
-      <div class="code">CRX0010020</div>
-      <div class="desc">Crimson Snapper Portion 180/220g (IVP, 1x50ea)</div>
-    </div>
-<div class="card" data-cat="Red Snapper" data-search="rsx0003sfz ul serve red snapper ptn (tp, 2sx120g, 60eax240 g)">
-      <img loading="lazy" src="images/RSX0003SFZ.webp" alt="RSX0003SFZ">
-      <div class="code">RSX0003SFZ</div>
-      <div class="desc">UL Serve Red Snapper Ptn (TP, 2sx120g, 60eax240 g)</div>
-    </div>
-<div class="card" data-cat="Barramundi" data-search="bax0046020 barramundi portion (ivp, 60ea x 150 g)">
-      <img loading="lazy" src="images/BAX0046020.webp" alt="BAX0046020">
-      <div class="code">BAX0046020</div>
-      <div class="desc">Barramundi Portion (IVP, 60ea x 150 g)</div>
-    </div>
-<div class="card" data-cat="Barramundi" data-search="bax0038020 ul rm barramundi s-cut portion (60ea x 200 g)">
-      <img loading="lazy" src="images/BAX0038020.webp" alt="BAX0038020">
-      <div class="code">BAX0038020</div>
-      <div class="desc">UL RM Barramundi S-Cut Portion (60ea x 200 g)</div>
-    </div>
-<div class="card" data-cat="Batang" data-search="btx0005sfz ul serve batang ptn (tp, 2s x 120g, 60ea x 240 g)">
-      <img loading="lazy" src="images/BTX0005SFZ.webp" alt="BTX0005SFZ">
-      <div class="code">BTX0005SFZ</div>
-      <div class="desc">UL Serve Batang Ptn (TP, 2s x 120g, 60ea x 240 g)</div>
-    </div>
-<div class="card" data-cat="Batang" data-search="btx0044020 batang steak 120/140g (1ea x 10pc, 10ea/ctn)">
-      <img loading="lazy" src="images/BTX0044020.webp" alt="BTX0044020">
-      <div class="code">BTX0044020</div>
-      <div class="desc">Batang Steak 120/140g (1ea x 10pc, 10ea/ctn)</div>
-    </div>
-<div class="card" data-cat="Angoli" data-search="agx0002sfz ul serve angoli portion (itp, 60ea x 150 g)">
-      <img loading="lazy" src="images/AGX0002SFZ.webp" alt="AGX0002SFZ">
-      <div class="code">AGX0002SFZ</div>
-      <div class="desc">UL Serve Angoli Portion (ITP, 60ea x 150 g)</div>
-    </div>
-<div class="card" data-cat="Angoli" data-search="agx0054020 angoli steak 110/130g (1ea x 10pc, 10ea/ctn)">
-      <img loading="lazy" src="images/AGX0054020.webp" alt="AGX0054020">
-      <div class="code">AGX0054020</div>
-      <div class="desc">Angoli Steak 110/130g (1ea x 10pc, 10ea/ctn)</div>
-    </div>
-<div class="card" data-cat="Halibut" data-search="sjx0001094 halibut fillet skls 400/800g (1 x 10 kg)">
-      <img loading="lazy" src="images/SJX0001094.webp" alt="SJX0001094">
-      <div class="code">SJX0001094</div>
-      <div class="desc">Halibut Fillet SKLS 400/800g (1 x 10 kg)</div>
-    </div>
-<div class="card" data-cat="Halibut" data-search="sjx1001sfz serve sustainable halibut ptn (tp, 2sx120g, 15eax240g)">
-      <img loading="lazy" src="images/SJX1001SFZ.webp" alt="SJX1001SFZ">
-      <div class="code">SJX1001SFZ</div>
-      <div class="desc">Serve Sustainable Halibut Ptn (TP, 2sx120g, 15eax240g)</div>
-    </div>
-<div class="card" data-cat="Pomfret & Threadfin" data-search="gpx0002sfz ul serve golden pomfret ggs (15ea x 350 g)">
-      <img loading="lazy" src="images/GPX0002SFZ.webp" alt="GPX0002SFZ">
-      <div class="code">GPX0002SFZ</div>
-      <div class="desc">UL Serve Golden Pomfret GGS (15ea x 350 g)</div>
-    </div>
-<div class="card" data-cat="Pomfret & Threadfin" data-search="tfx0003sfz ul serve threadfin ptn (tp, 2sx100g, 60ea x 200 g)">
-      <img loading="lazy" src="images/TFX0003SFZ.webp" alt="TFX0003SFZ">
-      <div class="code">TFX0003SFZ</div>
-      <div class="desc">UL Serve Threadfin Ptn (TP, 2sx100g, 60ea x 200 g)</div>
-    </div>
-<div class="card" data-cat="Sutchi" data-search="sb-srx0001158 sb-sutchi cut cube 20/30g (10ea x 1 kg)">
-      <img loading="lazy" src="images/SB-SRX0001158.webp" alt="SB-SRX0001158">
-      <div class="code">SB-SRX0001158</div>
-      <div class="desc">SB-Sutchi Cut Cube 20/30g (10ea x 1 kg)</div>
-    </div>
-<div class="card" data-cat="Sutchi" data-search="srx0006158 sutchi cut cube 20/30g (10ea x 1 kg)">
-      <img loading="lazy" src="images/SRX0006158.webp" alt="SRX0006158">
-      <div class="code">SRX0006158</div>
-      <div class="desc">Sutchi Cut Cube 20/30g (10ea x 1 kg)</div>
-    </div>
-<div class="card" data-cat="Snakehead" data-search="tox0013148 snake head slice 10/15g (40ea x 200 g)">
-      <img loading="lazy" src="images/TOX0013148.webp" alt="TOX0013148">
-      <div class="code">TOX0013148</div>
-      <div class="desc">Snake Head Slice 10/15g (40ea x 200 g)</div>
-    </div>
-<div class="card" data-cat="Snakehead" data-search="tox0003sfz ul serve toman slice (60ea x 200 g)">
-      <img loading="lazy" src="images/TOX0003SFZ.webp" alt="TOX0003SFZ">
-      <div class="code">TOX0003SFZ</div>
-      <div class="desc">UL Serve Toman Slice (60ea x 200 g)</div>
-    </div>
-<div class="card" data-cat="Crab" data-search="st-sxx0001oem st-snow crab claw (36/40)(1ea x 9pc, 30ea x 250 g)">
-      <img loading="lazy" src="images/ST-SXX0001OEM.webp" alt="ST-SXX0001OEM">
-      <div class="code">ST-SXX0001OEM</div>
-      <div class="desc">ST-Snow Crab Claw (36/40)(1ea x 9pc, 30ea x 250 g)</div>
-    </div>
-<div class="card" data-cat="Stingray" data-search="stx0018020 stingray cut square 130/160g (1ea x 10pc, 6ea/ctn)">
-      <img loading="lazy" src="images/STX0018020.webp" alt="STX0018020">
-      <div class="code">STX0018020</div>
-      <div class="desc">Stingray Cut Square 130/160g (1ea x 10pc, 6ea/ctn)</div>
-    </div>
-<div class="card" data-cat="Fish Roe" data-search="hmx0001020 xl fish roe (tp, 9-11 kg)">
-      <img loading="lazy" src="images/HMX0001020.webp" alt="HMX0001020">
-      <div class="code">HMX0001020</div>
-      <div class="desc">XL Fish Roe (TP, 9-11 kg)</div>
-    </div>
+<section class="hero">
+  <div class="kicker">Premium Seafood</div>
+  <h1>Seafood <em>Product Catalog</em></h1>
+  <p>Hand-selected cuts, portioned and packed for food service. Tap any product for details.</p>
+  <div class="search">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input id="q" placeholder="Search code or product name...">
+  </div>
+</section>
+<div class="bar"><div class="pills"><button class="pill on" data-f="All">All</button><button class="pill" data-f="Salmon">Salmon</button><button class="pill" data-f="Red Snapper">Red Snapper</button><button class="pill" data-f="Barramundi">Barramundi</button><button class="pill" data-f="Batang">Batang</button><button class="pill" data-f="Angoli">Angoli</button><button class="pill" data-f="Halibut">Halibut</button><button class="pill" data-f="Pomfret & Threadfin">Pomfret & Threadfin</button><button class="pill" data-f="Sutchi">Sutchi</button><button class="pill" data-f="Snakehead">Snakehead</button><button class="pill" data-f="Crab">Crab</button><button class="pill" data-f="Stingray">Stingray</button><button class="pill" data-f="Fish Roe">Fish Roe</button></div></div>
+<div class="wrap">
+  <div class="count" id="count"></div>
+  <div class="grid"><article class="card" data-cat="Salmon" data-search="smx0075020 mt cook nz king salmon sq cut ptn 30ea x 150 g" data-code="SMX0075020" data-name="Mt Cook NZ King Salmon Sq Cut Ptn" data-spec="30ea x 150 g" data-img="images/SMX0075020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SMX0075020.webp" alt="SMX0075020"></div>
+      <div class="cbody"><div class="ccat">Salmon</div><h3>SMX0075020</h3><p>Mt Cook NZ King Salmon Sq Cut Ptn</p></div>
+    </article>
+<article class="card" data-cat="Salmon" data-search="smx0071020 nz king salmon square cut portion 60ea x 150 g" data-code="SMX0071020" data-name="NZ King Salmon Square Cut Portion" data-spec="60ea x 150 g" data-img="images/SMX0071020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SMX0071020.webp" alt="SMX0071020"></div>
+      <div class="cbody"><div class="ccat">Salmon</div><h3>SMX0071020</h3><p>NZ King Salmon Square Cut Portion</p></div>
+    </article>
+<article class="card" data-cat="Salmon" data-search="smx0006sfz serve salmon portion tp, 2s x 120g, 60ea x 240 g" data-code="SMX0006SFZ" data-name="Serve Salmon Portion" data-spec="TP, 2s x 120g, 60ea x 240 g" data-img="images/SMX0006SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SMX0006SFZ.webp" alt="SMX0006SFZ"></div>
+      <div class="cbody"><div class="ccat">Salmon</div><h3>SMX0006SFZ</h3><p>Serve Salmon Portion</p></div>
+    </article>
+<article class="card" data-cat="Salmon" data-search="smx0020020 nz king salmon s-cut portion tp, 60ea x 200 g" data-code="SMX0020020" data-name="NZ King Salmon S-Cut Portion" data-spec="TP, 60ea x 200 g" data-img="images/SMX0020020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SMX0020020.webp" alt="SMX0020020"></div>
+      <div class="cbody"><div class="ccat">Salmon</div><h3>SMX0020020</h3><p>NZ King Salmon S-Cut Portion</p></div>
+    </article>
+<article class="card" data-cat="Salmon" data-search="nsx0008020 ul rm nor salmon s-cut portion 60ea x 190 g" data-code="NSX0008020" data-name="UL RM Nor Salmon S-Cut Portion" data-spec="60ea x 190 g" data-img="images/NSX0008020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/NSX0008020.webp" alt="NSX0008020"></div>
+      <div class="cbody"><div class="ccat">Salmon</div><h3>NSX0008020</h3><p>UL RM Nor Salmon S-Cut Portion</p></div>
+    </article>
+<article class="card" data-cat="Red Snapper" data-search="crx0001sfz ul serve crimson snapper ggs 15ea x 400 g" data-code="CRX0001SFZ" data-name="UL Serve Crimson Snapper GGS" data-spec="15ea x 400 g" data-img="images/CRX0001SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/CRX0001SFZ.webp" alt="CRX0001SFZ"></div>
+      <div class="cbody"><div class="ccat">Red Snapper</div><h3>CRX0001SFZ</h3><p>UL Serve Crimson Snapper GGS</p></div>
+    </article>
+<article class="card" data-cat="Red Snapper" data-search="crx0010020 crimson snapper portion 180/220g, ivp, 1x50ea" data-code="CRX0010020" data-name="Crimson Snapper Portion" data-spec="180/220g, IVP, 1x50ea" data-img="images/CRX0010020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/CRX0010020.webp" alt="CRX0010020"></div>
+      <div class="cbody"><div class="ccat">Red Snapper</div><h3>CRX0010020</h3><p>Crimson Snapper Portion</p></div>
+    </article>
+<article class="card" data-cat="Red Snapper" data-search="rsx0003sfz ul serve red snapper ptn tp, 2sx120g, 60eax240 g" data-code="RSX0003SFZ" data-name="UL Serve Red Snapper Ptn" data-spec="TP, 2sx120g, 60eax240 g" data-img="images/RSX0003SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/RSX0003SFZ.webp" alt="RSX0003SFZ"></div>
+      <div class="cbody"><div class="ccat">Red Snapper</div><h3>RSX0003SFZ</h3><p>UL Serve Red Snapper Ptn</p></div>
+    </article>
+<article class="card" data-cat="Barramundi" data-search="bax0046020 barramundi portion ivp, 60ea x 150 g" data-code="BAX0046020" data-name="Barramundi Portion" data-spec="IVP, 60ea x 150 g" data-img="images/BAX0046020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/BAX0046020.webp" alt="BAX0046020"></div>
+      <div class="cbody"><div class="ccat">Barramundi</div><h3>BAX0046020</h3><p>Barramundi Portion</p></div>
+    </article>
+<article class="card" data-cat="Barramundi" data-search="bax0038020 ul rm barramundi s-cut portion 60ea x 200 g" data-code="BAX0038020" data-name="UL RM Barramundi S-Cut Portion" data-spec="60ea x 200 g" data-img="images/BAX0038020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/BAX0038020.webp" alt="BAX0038020"></div>
+      <div class="cbody"><div class="ccat">Barramundi</div><h3>BAX0038020</h3><p>UL RM Barramundi S-Cut Portion</p></div>
+    </article>
+<article class="card" data-cat="Batang" data-search="btx0005sfz ul serve batang ptn tp, 2s x 120g, 60ea x 240 g" data-code="BTX0005SFZ" data-name="UL Serve Batang Ptn" data-spec="TP, 2s x 120g, 60ea x 240 g" data-img="images/BTX0005SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/BTX0005SFZ.webp" alt="BTX0005SFZ"></div>
+      <div class="cbody"><div class="ccat">Batang</div><h3>BTX0005SFZ</h3><p>UL Serve Batang Ptn</p></div>
+    </article>
+<article class="card" data-cat="Batang" data-search="btx0044020 batang steak 120/140g, 1ea x 10pc, 10ea/ctn" data-code="BTX0044020" data-name="Batang Steak" data-spec="120/140g, 1ea x 10pc, 10ea/ctn" data-img="images/BTX0044020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/BTX0044020.webp" alt="BTX0044020"></div>
+      <div class="cbody"><div class="ccat">Batang</div><h3>BTX0044020</h3><p>Batang Steak</p></div>
+    </article>
+<article class="card" data-cat="Angoli" data-search="agx0002sfz ul serve angoli portion itp, 60ea x 150 g" data-code="AGX0002SFZ" data-name="UL Serve Angoli Portion" data-spec="ITP, 60ea x 150 g" data-img="images/AGX0002SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/AGX0002SFZ.webp" alt="AGX0002SFZ"></div>
+      <div class="cbody"><div class="ccat">Angoli</div><h3>AGX0002SFZ</h3><p>UL Serve Angoli Portion</p></div>
+    </article>
+<article class="card" data-cat="Angoli" data-search="agx0054020 angoli steak 110/130g, 1ea x 10pc, 10ea/ctn" data-code="AGX0054020" data-name="Angoli Steak" data-spec="110/130g, 1ea x 10pc, 10ea/ctn" data-img="images/AGX0054020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/AGX0054020.webp" alt="AGX0054020"></div>
+      <div class="cbody"><div class="ccat">Angoli</div><h3>AGX0054020</h3><p>Angoli Steak</p></div>
+    </article>
+<article class="card" data-cat="Halibut" data-search="sjx0001094 halibut fillet skls 400/800g, 1 x 10 kg" data-code="SJX0001094" data-name="Halibut Fillet SKLS" data-spec="400/800g, 1 x 10 kg" data-img="images/SJX0001094.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SJX0001094.webp" alt="SJX0001094"></div>
+      <div class="cbody"><div class="ccat">Halibut</div><h3>SJX0001094</h3><p>Halibut Fillet SKLS</p></div>
+    </article>
+<article class="card" data-cat="Halibut" data-search="sjx1001sfz serve sustainable halibut ptn tp, 2sx120g, 15eax240g" data-code="SJX1001SFZ" data-name="Serve Sustainable Halibut Ptn" data-spec="TP, 2sx120g, 15eax240g" data-img="images/SJX1001SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SJX1001SFZ.webp" alt="SJX1001SFZ"></div>
+      <div class="cbody"><div class="ccat">Halibut</div><h3>SJX1001SFZ</h3><p>Serve Sustainable Halibut Ptn</p></div>
+    </article>
+<article class="card" data-cat="Pomfret & Threadfin" data-search="gpx0002sfz ul serve golden pomfret ggs 15ea x 350 g" data-code="GPX0002SFZ" data-name="UL Serve Golden Pomfret GGS" data-spec="15ea x 350 g" data-img="images/GPX0002SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/GPX0002SFZ.webp" alt="GPX0002SFZ"></div>
+      <div class="cbody"><div class="ccat">Pomfret & Threadfin</div><h3>GPX0002SFZ</h3><p>UL Serve Golden Pomfret GGS</p></div>
+    </article>
+<article class="card" data-cat="Pomfret & Threadfin" data-search="tfx0003sfz ul serve threadfin ptn tp, 2sx100g, 60ea x 200 g" data-code="TFX0003SFZ" data-name="UL Serve Threadfin Ptn" data-spec="TP, 2sx100g, 60ea x 200 g" data-img="images/TFX0003SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/TFX0003SFZ.webp" alt="TFX0003SFZ"></div>
+      <div class="cbody"><div class="ccat">Pomfret & Threadfin</div><h3>TFX0003SFZ</h3><p>UL Serve Threadfin Ptn</p></div>
+    </article>
+<article class="card" data-cat="Sutchi" data-search="sb-srx0001158 sb-sutchi cut cube 20/30g, 10ea x 1 kg" data-code="SB-SRX0001158" data-name="SB-Sutchi Cut Cube" data-spec="20/30g, 10ea x 1 kg" data-img="images/SB-SRX0001158.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SB-SRX0001158.webp" alt="SB-SRX0001158"></div>
+      <div class="cbody"><div class="ccat">Sutchi</div><h3>SB-SRX0001158</h3><p>SB-Sutchi Cut Cube</p></div>
+    </article>
+<article class="card" data-cat="Sutchi" data-search="srx0006158 sutchi cut cube 20/30g, 10ea x 1 kg" data-code="SRX0006158" data-name="Sutchi Cut Cube" data-spec="20/30g, 10ea x 1 kg" data-img="images/SRX0006158.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/SRX0006158.webp" alt="SRX0006158"></div>
+      <div class="cbody"><div class="ccat">Sutchi</div><h3>SRX0006158</h3><p>Sutchi Cut Cube</p></div>
+    </article>
+<article class="card" data-cat="Snakehead" data-search="tox0013148 snake head slice 10/15g, 40ea x 200 g" data-code="TOX0013148" data-name="Snake Head Slice" data-spec="10/15g, 40ea x 200 g" data-img="images/TOX0013148.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/TOX0013148.webp" alt="TOX0013148"></div>
+      <div class="cbody"><div class="ccat">Snakehead</div><h3>TOX0013148</h3><p>Snake Head Slice</p></div>
+    </article>
+<article class="card" data-cat="Snakehead" data-search="tox0003sfz ul serve toman slice 60ea x 200 g" data-code="TOX0003SFZ" data-name="UL Serve Toman Slice" data-spec="60ea x 200 g" data-img="images/TOX0003SFZ.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/TOX0003SFZ.webp" alt="TOX0003SFZ"></div>
+      <div class="cbody"><div class="ccat">Snakehead</div><h3>TOX0003SFZ</h3><p>UL Serve Toman Slice</p></div>
+    </article>
+<article class="card" data-cat="Crab" data-search="st-sxx0001oem st-snow crab claw 36/40, 1ea x 9pc, 30ea x 250 g" data-code="ST-SXX0001OEM" data-name="ST-Snow Crab Claw" data-spec="36/40, 1ea x 9pc, 30ea x 250 g" data-img="images/ST-SXX0001OEM.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/ST-SXX0001OEM.webp" alt="ST-SXX0001OEM"></div>
+      <div class="cbody"><div class="ccat">Crab</div><h3>ST-SXX0001OEM</h3><p>ST-Snow Crab Claw</p></div>
+    </article>
+<article class="card" data-cat="Stingray" data-search="stx0018020 stingray cut square 130/160g, 1ea x 10pc, 6ea/ctn" data-code="STX0018020" data-name="Stingray Cut Square" data-spec="130/160g, 1ea x 10pc, 6ea/ctn" data-img="images/STX0018020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/STX0018020.webp" alt="STX0018020"></div>
+      <div class="cbody"><div class="ccat">Stingray</div><h3>STX0018020</h3><p>Stingray Cut Square</p></div>
+    </article>
+<article class="card" data-cat="Fish Roe" data-search="hmx0001020 xl fish roe tp, 9-11 kg" data-code="HMX0001020" data-name="XL Fish Roe" data-spec="TP, 9-11 kg" data-img="images/HMX0001020.webp">
+      <div class="imgwrap"><img loading="lazy" src="images/HMX0001020.webp" alt="HMX0001020"></div>
+      <div class="cbody"><div class="ccat">Fish Roe</div><h3>HMX0001020</h3><p>XL Fish Roe</p></div>
+    </article></div>
+  <div class="empty" id="empty">No products match — try another keyword.</div>
 </div>
-<div id="n"></div>
-<footer>25 products · Images for reference only</footer>
+<footer><div class="rule"></div>25 PRODUCTS · IMAGES FOR REFERENCE ONLY</footer>
+<div class="modal" id="modal"><div class="scrim"></div>
+  <div class="sheet">
+    <button class="close" id="close">✕</button>
+    <img id="mimg" alt="">
+    <div class="pad"><div class="ccat" id="mcat"></div><h2 id="mname"></h2><div class="code" id="mcode"></div><div class="spec" id="mspec"></div></div>
+  </div>
+</div>
 <script>
-const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],n=document.getElementById('n');
+const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],
+count=document.getElementById('count'),empty=document.getElementById('empty');
 let f='All';
 function go(){let v=0;const s=q.value.trim().toLowerCase();
 cards.forEach(c=>{const ok=(f==='All'||c.dataset.cat===f)&&(!s||c.dataset.search.includes(s));
 c.classList.toggle('hide',!ok);if(ok)v++});
-n.textContent=v?`Found ${v} products`:'No match, try another keyword';}
+count.textContent=v?`${v} of 25 products`:'';
+empty.style.display=v?'none':'block';}
 q.addEventListener('input',go);
-document.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;go()});
+document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;go()});
+const modal=document.getElementById('modal');
+cards.forEach(c=>c.onclick=()=>{
+document.getElementById('mimg').src=c.dataset.img;
+document.getElementById('mcat').textContent=c.dataset.cat;
+document.getElementById('mname').textContent=c.dataset.name;
+document.getElementById('mcode').textContent=c.dataset.code;
+document.getElementById('mspec').textContent='Packing spec: '+c.dataset.spec;
+modal.classList.add('open');document.body.style.overflow='hidden';});
+function shut(){modal.classList.remove('open');document.body.style.overflow=''}
+document.getElementById('close').onclick=shut;
+modal.querySelector('.scrim').onclick=shut;
 go();
 </script></body></html>
