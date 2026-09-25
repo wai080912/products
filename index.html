@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>海鲜产品目录</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f5;color:#222;padding-bottom:40px}
+header{background:#0b6e4f;color:#fff;padding:28px 16px;text-align:center;position:sticky;top:0;z-index:10}
+header h1{font-size:28px;margin-bottom:12px}
+#q{width:100%;max-width:560px;font-size:20px;padding:14px 16px;border:none;border-radius:12px}
+.filters{display:flex;gap:10px;overflow-x:auto;padding:14px 16px;background:#fff;position:sticky;top:118px;z-index:9}
+.fbtn{flex:0 0 auto;font-size:18px;padding:10px 20px;border:2px solid #0b6e4f;background:#fff;color:#0b6e4f;border-radius:999px}
+.fbtn.on{background:#0b6e4f;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;padding:16px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.card .code{font-size:19px;font-weight:700;padding:10px 12px 2px}
+.card .desc{font-size:15px;color:#555;padding:0 12px 14px;line-height:1.5}
+.card.hide{display:none}
+#n{text-align:center;color:#888;font-size:17px;padding:10px}
+footer{text-align:center;color:#999;font-size:14px;padding:24px}
+</style></head><body>
+<header><h1>🐟 海鲜产品目录</h1><input id="q" placeholder="搜索编号或品名…"></header>
+<div class="filters"><button class="fbtn on" data-f="全部">全部</button><button class="fbtn" data-f="三文鱼">三文鱼</button><button class="fbtn" data-f="红鱼">红鱼</button><button class="fbtn" data-f="金目鲈">金目鲈</button><button class="fbtn" data-f="巴当鱼">巴当鱼</button><button class="fbtn" data-f="安哥利">安哥利</button><button class="fbtn" data-f="比目鱼">比目鱼</button><button class="fbtn" data-f="其他海鲜">其他海鲜</button></div>
+<div class="grid">
+<div class="card" data-cat="三文鱼" data-search="smx0075020 mt cook nz king salmon sq cut ptn (30ea x 150 g)">
+      <img loading="lazy" src="images/SMX0075020.webp" alt="SMX0075020">
+      <div class="code">SMX0075020</div>
+      <div class="desc">Mt Cook NZ King Salmon Sq Cut Ptn (30ea x 150 g)</div>
+    </div>
+<div class="card" data-cat="三文鱼" data-search="smx0071020 nz king salmon square cut portion (60ea x 150 g)">
+      <img loading="lazy" src="images/SMX0071020.webp" alt="SMX0071020">
+      <div class="code">SMX0071020</div>
+      <div class="desc">NZ King Salmon Square Cut Portion (60ea x 150 g)</div>
+    </div>
+<div class="card" data-cat="三文鱼" data-search="smx0006sfz serve salmon portion (tp, 2s x 120g, 60ea x 240 g)">
+      <img loading="lazy" src="images/SMX0006SFZ.webp" alt="SMX0006SFZ">
+      <div class="code">SMX0006SFZ</div>
+      <div class="desc">Serve Salmon Portion (TP, 2s x 120g, 60ea x 240 g)</div>
+    </div>
+<div class="card" data-cat="三文鱼" data-search="smx0020020 nz king salmon s-cut portion (tp, 60ea x 200 g)">
+      <img loading="lazy" src="images/SMX0020020.webp" alt="SMX0020020">
+      <div class="code">SMX0020020</div>
+      <div class="desc">NZ King Salmon S-Cut Portion (TP, 60ea x 200 g)</div>
+    </div>
+<div class="card" data-cat="三文鱼" data-search="nsx0008020 ul rm nor salmon s-cut portion (60ea x 190 g)">
+      <img loading="lazy" src="images/NSX0008020.webp" alt="NSX0008020">
+      <div class="code">NSX0008020</div>
+      <div class="desc">UL RM Nor Salmon S-Cut Portion (60ea x 190 g)</div>
+    </div>
+<div class="card" data-cat="红鱼" data-search="crx0001sfz ul serve crimson snapper ggs (15ea x 400 g)">
+      <img loading="lazy" src="images/CRX0001SFZ.webp" alt="CRX0001SFZ">
+      <div class="code">CRX0001SFZ</div>
+      <div class="desc">UL Serve Crimson Snapper GGS (15ea x 400 g)</div>
+    </div>
+<div class="card" data-cat="红鱼" data-search="crx0010020 crimson snapper portion 180/220g (ivp, 1x50ea)">
+      <img loading="lazy" src="images/CRX0010020.webp" alt="CRX0010020">
+      <div class="code">CRX0010020</div>
+      <div class="desc">Crimson Snapper Portion 180/220g (IVP, 1x50ea)</div>
+    </div>
+<div class="card" data-cat="红鱼" data-search="rsx0003sfz ul serve red snapper ptn (tp, 2sx120g, 60eax240 g)">
+      <img loading="lazy" src="images/RSX0003SFZ.webp" alt="RSX0003SFZ">
+      <div class="code">RSX0003SFZ</div>
+      <div class="desc">UL Serve Red Snapper Ptn (TP, 2sx120g, 60eax240 g)</div>
+    </div>
+<div class="card" data-cat="金目鲈" data-search="bax0046020 barramundi portion (ivp, 60ea x 150 g)">
+      <img loading="lazy" src="images/BAX0046020.webp" alt="BAX0046020">
+      <div class="code">BAX0046020</div>
+      <div class="desc">Barramundi Portion (IVP, 60ea x 150 g)</div>
+    </div>
+<div class="card" data-cat="金目鲈" data-search="bax0038020 ul rm barramundi s-cut portion (60ea x 200 g)">
+      <img loading="lazy" src="images/BAX0038020.webp" alt="BAX0038020">
+      <div class="code">BAX0038020</div>
+      <div class="desc">UL RM Barramundi S-Cut Portion (60ea x 200 g)</div>
+    </div>
+<div class="card" data-cat="巴当鱼" data-search="btx0005sfz ul serve batang ptn (tp, 2s x 120g, 60ea x 240 g)">
+      <img loading="lazy" src="images/BTX0005SFZ.webp" alt="BTX0005SFZ">
+      <div class="code">BTX0005SFZ</div>
+      <div class="desc">UL Serve Batang Ptn (TP, 2s x 120g, 60ea x 240 g)</div>
+    </div>
+<div class="card" data-cat="巴当鱼" data-search="btx0044020 batang steak 120/140g (1ea x 10pc, 10ea/ctn)">
+      <img loading="lazy" src="images/BTX0044020.webp" alt="BTX0044020">
+      <div class="code">BTX0044020</div>
+      <div class="desc">Batang Steak 120/140g (1ea x 10pc, 10ea/ctn)</div>
+    </div>
+<div class="card" data-cat="安哥利" data-search="agx0002sfz ul serve angoli portion (itp, 60ea x 150 g)">
+      <img loading="lazy" src="images/AGX0002SFZ.webp" alt="AGX0002SFZ">
+      <div class="code">AGX0002SFZ</div>
+      <div class="desc">UL Serve Angoli Portion (ITP, 60ea x 150 g)</div>
+    </div>
+<div class="card" data-cat="安哥利" data-search="agx0054020 angoli steak 110/130g (1ea x 10pc, 10ea/ctn)">
+      <img loading="lazy" src="images/AGX0054020.webp" alt="AGX0054020">
+      <div class="code">AGX0054020</div>
+      <div class="desc">Angoli Steak 110/130g (1ea x 10pc, 10ea/ctn)</div>
+    </div>
+<div class="card" data-cat="比目鱼" data-search="sjx0001094 halibut fillet skls 400/800g (1 x 10 kg)">
+      <img loading="lazy" src="images/SJX0001094.webp" alt="SJX0001094">
+      <div class="code">SJX0001094</div>
+      <div class="desc">Halibut Fillet SKLS 400/800g (1 x 10 kg)</div>
+    </div>
+<div class="card" data-cat="比目鱼" data-search="sjx1001sfz serve sustainable halibut ptn (tp, 2sx120g, 15eax240g)">
+      <img loading="lazy" src="images/SJX1001SFZ.webp" alt="SJX1001SFZ">
+      <div class="code">SJX1001SFZ</div>
+      <div class="desc">Serve Sustainable Halibut Ptn (TP, 2sx120g, 15eax240g)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="gpx0002sfz ul serve golden pomfret ggs (15ea x 350 g)">
+      <img loading="lazy" src="images/GPX0002SFZ.webp" alt="GPX0002SFZ">
+      <div class="code">GPX0002SFZ</div>
+      <div class="desc">UL Serve Golden Pomfret GGS (15ea x 350 g)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="tfx0003sfz ul serve threadfin ptn (tp, 2sx100g, 60ea x 200 g)">
+      <img loading="lazy" src="images/TFX0003SFZ.webp" alt="TFX0003SFZ">
+      <div class="code">TFX0003SFZ</div>
+      <div class="desc">UL Serve Threadfin Ptn (TP, 2sx100g, 60ea x 200 g)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="st-sxx0001oem st-snow crab claw (36/40)(1ea x 9pc, 30ea x 250 g)">
+      <img loading="lazy" src="images/ST-SXX0001OEM.webp" alt="ST-SXX0001OEM">
+      <div class="code">ST-SXX0001OEM</div>
+      <div class="desc">ST-Snow Crab Claw (36/40)(1ea x 9pc, 30ea x 250 g)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="stx0018020 stingray cut square 130/160g (1ea x 10pc, 6ea/ctn)">
+      <img loading="lazy" src="images/STX0018020.webp" alt="STX0018020">
+      <div class="code">STX0018020</div>
+      <div class="desc">Stingray Cut Square 130/160g (1ea x 10pc, 6ea/ctn)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="sb-srx0001158 sb-sutchi cut cube 20/30g (10ea x 1 kg)">
+      <img loading="lazy" src="images/SB-SRX0001158.webp" alt="SB-SRX0001158">
+      <div class="code">SB-SRX0001158</div>
+      <div class="desc">SB-Sutchi Cut Cube 20/30g (10ea x 1 kg)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="srx0006158 sutchi cut cube 20/30g (10ea x 1 kg)">
+      <img loading="lazy" src="images/SRX0006158.webp" alt="SRX0006158">
+      <div class="code">SRX0006158</div>
+      <div class="desc">Sutchi Cut Cube 20/30g (10ea x 1 kg)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="tox0013148 snake head slice 10/15g (40ea x 200 g)">
+      <img loading="lazy" src="images/TOX0013148.webp" alt="TOX0013148">
+      <div class="code">TOX0013148</div>
+      <div class="desc">Snake Head Slice 10/15g (40ea x 200 g)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="tox0003sfz ul serve toman slice (60ea x 200 g)">
+      <img loading="lazy" src="images/TOX0003SFZ.webp" alt="TOX0003SFZ">
+      <div class="code">TOX0003SFZ</div>
+      <div class="desc">UL Serve Toman Slice (60ea x 200 g)</div>
+    </div>
+<div class="card" data-cat="其他海鲜" data-search="hmx0001020 xl fish roe (tp, 9-11 kg)">
+      <img loading="lazy" src="images/HMX0001020.webp" alt="HMX0001020">
+      <div class="code">HMX0001020</div>
+      <div class="desc">XL Fish Roe (TP, 9-11 kg)</div>
+    </div>
+</div>
+<div id="n"></div>
+<footer>共 25 款产品 · 图片仅供参考</footer>
+<script>
+const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],n=document.getElementById('n');
+let f='全部';
+function go(){let v=0;const s=q.value.trim().toLowerCase();
+cards.forEach(c=>{const ok=(f==='全部'||c.dataset.cat===f)&&(!s||c.dataset.search.includes(s));
+c.classList.toggle('hide',!ok);if(ok)v++});
+n.textContent=v?`找到 ${v} 款`:'没有找到，换个关键词试试';}
+q.addEventListener('input',go);
+document.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;go()});
+go();
+</script></body></html>
