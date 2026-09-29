@@ -24,6 +24,8 @@ body{font-family:Inter,-apple-system,"Segoe UI",sans-serif;background:var(--bg);
 .pills::-webkit-scrollbar{display:none}
 .pill{flex:0 0 auto;font-size:15px;font-weight:500;padding:10px 22px;border-radius:999px;border:1px solid #cfdfe9;background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
 .pill.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.flip{display:none;justify-content:center;gap:10px;padding:16px 26px 0}
+.flip.show{display:flex}
 .wrap{max-width:1200px;margin:0 auto;padding:26px 18px 10px}
 .count{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:6px 4px 18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:20px}
@@ -88,7 +90,7 @@ footer .rule{width:56px;height:2px;background:var(--gold-d);margin:0 auto 16px}
       <div class="imgwrap"><img loading="lazy" src="images/NSX0008020.webp" alt="UL RM Nor Salmon S-Cut Portion"></div>
       <div class="cbody"><div class="ccat">Salmon</div><h3>UL RM Nor Salmon S-Cut Portion</h3><div class="spec">60ea x 190 g</div><div class="code">NSX0008020</div></div>
     </article>
-<article class="card" data-cat="Salmon" data-search="smx0084020 ark-nz king cold smoked salmon slice 30ea x 100 g" data-code="SMX0084020" data-name="ARK-NZ King Cold Smoked Salmon Slice" data-spec="30ea x 100 g" data-img="images/SMX0084020.webp">
+<article class="card" data-cat="Salmon" data-search="smx0084020 ark-nz king cold smoked salmon slice 30ea x 100 g" data-code="SMX0084020" data-name="ARK-NZ King Cold Smoked Salmon Slice" data-spec="30ea x 100 g" data-img="images/SMX0084020.webp" data-back="images/SMX0084020-back.webp">
       <div class="imgwrap"><img loading="lazy" src="images/SMX0084020.webp" alt="ARK-NZ King Cold Smoked Salmon Slice"></div>
       <div class="cbody"><div class="ccat">Salmon</div><h3>ARK-NZ King Cold Smoked Salmon Slice</h3><div class="spec">30ea x 100 g</div><div class="code">SMX0084020</div></div>
     </article>
@@ -180,6 +182,7 @@ footer .rule{width:56px;height:2px;background:var(--gold-d);margin:0 auto 16px}
   <div class="sheet">
     <button class="close" id="close">✕</button>
     <img id="mimg" alt="">
+    <div class="flip" id="flip"><button class="pill on" id="bfront">Front</button><button class="pill" id="bback">Back</button></div>
     <div class="pad"><div class="ccat" id="mcat"></div><h2 id="mname"></h2><div class="spec" id="mspec"></div><div class="code" id="mcode"></div></div>
   </div>
 </div>
@@ -190,17 +193,22 @@ let f='All';
 function go(){let v=0;const s=q.value.trim().toLowerCase();
 cards.forEach(c=>{const ok=(f==='All'||c.dataset.cat===f)&&(!s||c.dataset.search.includes(s));
 c.classList.toggle('hide',!ok);if(ok)v++});
-count.textContent=v?v+' of 25 products':'';
+count.textContent=v?v+' of '+cards.length+' products':'';
 empty.style.display=v?'none':'block';}
 q.addEventListener('input',go);
 document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;go()});
-const modal=document.getElementById('modal');
+const modal=document.getElementById('modal'),mimg=document.getElementById('mimg'),
+flip=document.getElementById('flip'),bfront=document.getElementById('bfront'),bback=document.getElementById('bback');
 cards.forEach(c=>c.onclick=()=>{
-document.getElementById('mimg').src=c.dataset.img;
+mimg.src=c.dataset.img;
 document.getElementById('mcat').textContent=c.dataset.cat;
 document.getElementById('mname').textContent=c.dataset.name;
 document.getElementById('mspec').textContent='Packing: '+c.dataset.spec;
 document.getElementById('mcode').textContent='Item code: '+c.dataset.code;
+flip.classList.toggle('show',!!c.dataset.back);
+bfront.classList.add('on');bback.classList.remove('on');
+bfront.onclick=()=>{mimg.src=c.dataset.img;bfront.classList.add('on');bback.classList.remove('on')};
+bback.onclick=()=>{if(c.dataset.back){mimg.src=c.dataset.back;bback.classList.add('on');bfront.classList.remove('on')}};
 modal.classList.add('open');document.body.style.overflow='hidden';});
 function shut(){modal.classList.remove('open');document.body.style.overflow=''}
 document.getElementById('close').onclick=shut;
