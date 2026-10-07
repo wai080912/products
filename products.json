@@ -622,5 +622,13 @@
     "packing": "1/2kg (NFW)",
     "img": "images/SMX0070C.webp",
     "back": "images/SMX0070C-back.webp"
+  },
+  {
+    "code": "SMX0011SFZ",
+    "name": "UL Serve Salmon SKLS Belly",
+    "category": "Salmon",
+    "packing": "60ea x 200 g",
+    "img": "images/SMX0011SFZ.webp",
+    "back": "images/SMX0011SFZ-back.webp"
   }
 ]
