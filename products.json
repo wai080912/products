@@ -526,5 +526,21 @@
     "packing": "30ea x 220 g",
     "img": "images/SBX1003SFZ.webp",
     "back": "images/SBX1003SFZ-back.webp"
+  },
+  {
+    "code": "P65-RGW0001OEM",
+    "name": "P65-Red Grouper Ptn 200/220g",
+    "category": "Red Grouper",
+    "packing": "IVP, 1ctn x 60 ea",
+    "img": "images/P65-RGW0001OEM.webp",
+    "back": "images/P65-RGW0001OEM-back.webp"
+  },
+  {
+    "code": "RGX0028020",
+    "name": "Red Grouper Slice",
+    "category": "Red Grouper",
+    "packing": "10ea x 1 kg",
+    "img": "images/RGX0028020.webp",
+    "back": "images/RGX0028020-back.webp"
   }
 ]
