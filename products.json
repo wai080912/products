@@ -503,5 +503,12 @@
     "category": "Black Cod",
     "packing": "50ea x 150g",
     "img": "images/LF-CEX0001OEM.webp?v=1"
+  },
+  {
+    "code": "VPX0037032",
+    "name": "Vannamei Prawn HOSO 16/20",
+    "category": "Vannamei Prawn",
+    "packing": "10ea x 1 kg",
+    "img": "images/VPX0037032.webp"
   }
 ]
