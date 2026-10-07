@@ -574,5 +574,13 @@
     "packing": "60ea x 200 g",
     "img": "images/SQX0003SFZ.webp",
     "back": "images/SQX0003SFZ-back.webp"
+  },
+  {
+    "code": "SQX2003020",
+    "name": "HS-Squid WR",
+    "category": "Squid",
+    "packing": "24ea x 450 g (12081821)",
+    "img": "images/SQX2003020.webp",
+    "back": "images/SQX2003020-back.webp"
   }
 ]
