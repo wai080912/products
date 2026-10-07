@@ -614,5 +614,13 @@
     "packing": "60ea x 200 g",
     "img": "images/SMX0014SFZ.webp",
     "back": "images/SMX0014SFZ-back.webp"
+  },
+  {
+    "code": "SMX0070C",
+    "name": "Tasmanian Salmon Fillet Trim C",
+    "category": "Salmon",
+    "packing": "1/2kg (NFW)",
+    "img": "images/SMX0070C.webp",
+    "back": "images/SMX0070C-back.webp"
   }
 ]
