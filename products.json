@@ -606,5 +606,13 @@
     "packing": "VP, 1ea x 2pc, 60ea x 240 g",
     "img": "images/PM-SMX0001OEM.webp",
     "back": "images/PM-SMX0001OEM-back.webp"
+  },
+  {
+    "code": "SMX0014SFZ",
+    "name": "UL Serve Salmon SKLS Chunks",
+    "category": "Salmon",
+    "packing": "60ea x 200 g",
+    "img": "images/SMX0014SFZ.webp",
+    "back": "images/SMX0014SFZ-back.webp"
   }
 ]
