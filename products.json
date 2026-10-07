@@ -566,5 +566,13 @@
     "packing": "24ea x 450 g",
     "img": "images/PM-SQX0001OEM.webp",
     "back": "images/PM-SQX0001OEM-back.webp"
+  },
+  {
+    "code": "SQX0003SFZ",
+    "name": "UL Serve Squid Ring",
+    "category": "Squid",
+    "packing": "60ea x 200 g",
+    "img": "images/SQX0003SFZ.webp",
+    "back": "images/SQX0003SFZ-back.webp"
   }
 ]
