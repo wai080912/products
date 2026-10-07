@@ -17,6 +17,8 @@ for attrs in re.findall(r'<article class="card"([^>]*)>', page):
         p["keywords"] = old[p["code"]]["keywords"]
     products.append(p)
 
+if not products or len(products) < len(old) * 0.8:
+    raise SystemExit(f"读到 {len(products)} 个产品（上一版 {len(old)} 个），少太多，不更新 products.json")
 with open("products.json", "w", encoding="utf-8") as f:
     json.dump(products, f, ensure_ascii=False, indent=2)
     f.write("\n")
