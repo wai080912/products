@@ -590,5 +590,13 @@
     "packing": "60ea x 240 g",
     "img": "images/STX0002SFZ.webp",
     "back": "images/STX0002SFZ-back.webp"
+  },
+  {
+    "code": "SMX0013SFZ",
+    "name": "UL Serve Salmon Ptn",
+    "category": "Salmon",
+    "packing": "TP, 2s x 120g, 60ea x 240 g",
+    "img": "images/SMX0013SFZ.webp",
+    "back": "images/SMX0013SFZ-back.webp"
   }
 ]
