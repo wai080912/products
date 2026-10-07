@@ -508,7 +508,23 @@
     "code": "VPX0037032",
     "name": "Vannamei Prawn HOSO 16/20",
     "category": "Vannamei Prawn",
-    "packing": "10ea x 1 kg (Net 0.7 kg)",
+    "packing": "10ea x 1 kg（净重 0.7 kg）",
     "img": "images/VPX0037032.webp"
+  },
+  {
+    "code": "SBX0004020",
+    "name": "Saba Fillet",
+    "category": "Saba",
+    "packing": "30ea x 220 g",
+    "img": "images/SBX0004020.webp",
+    "back": "images/SBX0004020-back.webp"
+  },
+  {
+    "code": "SBX1003SFZ",
+    "name": "Serve Saba Fillet",
+    "category": "Saba",
+    "packing": "30ea x 220 g",
+    "img": "images/SBX1003SFZ.webp",
+    "back": "images/SBX1003SFZ-back.webp"
   }
 ]
