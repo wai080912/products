@@ -16,7 +16,7 @@ for p in products:
         if path and not os.path.exists(path):
             problems.append(f"{p['code']} {p['name']}：{'背面' if key == 'back' else ''}图片不见了")
 used = {p.get(k, "").split("?")[0] for p in products for k in ("img", "back")}
-unused = [f for f in sorted(os.listdir("images")) if "images/" + f not in used]
+unused = [f for f in sorted(os.listdir("images")) if "images/" + f not in used and f not in page]
 print("\n".join(problems) if problems else f"OK {len(products)} 个产品，图片齐全")
 if unused:
     print(f"（另有 {len(unused)} 张图没用到：{', '.join(unused[:5])}{' …' if len(unused) > 5 else ''}）")
