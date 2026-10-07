@@ -2,14 +2,14 @@
   {
     "code": "SMX0075020",
     "name": "Mt Cook NZ King Salmon Sq Cut Ptn",
-    "category": "Salmon",
+    "category": "NZ Salmon",
     "packing": "30ea x 150 g",
     "img": "images/SMX0075020.webp"
   },
   {
     "code": "SMX0071020",
     "name": "NZ King Salmon Square Cut Portion",
-    "category": "Salmon",
+    "category": "NZ Salmon",
     "packing": "60ea x 150 g",
     "img": "images/SMX0071020.webp?v=4",
     "back": "images/SMX0071020-back.webp?v=4"
@@ -24,7 +24,7 @@
   {
     "code": "SMX0020020",
     "name": "NZ King Salmon S-Cut Portion",
-    "category": "Salmon",
+    "category": "NZ Salmon",
     "packing": "TP, 60ea x 200 g",
     "img": "images/SMX0020020.webp"
   },
@@ -38,7 +38,7 @@
   {
     "code": "SMX0084020",
     "name": "ARK-NZ King Cold Smoked Salmon Slice",
-    "category": "Salmon",
+    "category": "NZ Salmon",
     "packing": "30ea x 100 g",
     "img": "images/SMX0084020.webp?v=2",
     "back": "images/SMX0084020-back.webp"
