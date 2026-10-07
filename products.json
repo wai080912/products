@@ -1,0 +1,469 @@
+[
+  {
+    "code": "SMX0075020",
+    "name": "Mt Cook NZ King Salmon Sq Cut Ptn",
+    "category": "Salmon",
+    "packing": "30ea x 150 g",
+    "img": "images/SMX0075020.webp"
+  },
+  {
+    "code": "SMX0071020",
+    "name": "NZ King Salmon Square Cut Portion",
+    "category": "Salmon",
+    "packing": "60ea x 150 g",
+    "img": "images/SMX0071020.webp?v=4",
+    "back": "images/SMX0071020-back.webp?v=4"
+  },
+  {
+    "code": "SMX0006SFZ",
+    "name": "Serve Salmon Portion",
+    "category": "Salmon",
+    "packing": "TP, 2s x 120g, 60ea x 240 g",
+    "img": "images/SMX0006SFZ.webp?v=3"
+  },
+  {
+    "code": "SMX0020020",
+    "name": "NZ King Salmon S-Cut Portion",
+    "category": "Salmon",
+    "packing": "TP, 60ea x 200 g",
+    "img": "images/SMX0020020.webp"
+  },
+  {
+    "code": "NSX0008020",
+    "name": "UL RM Nor Salmon S-Cut Portion",
+    "category": "Salmon",
+    "packing": "60ea x 190 g",
+    "img": "images/NSX0008020.webp"
+  },
+  {
+    "code": "SMX0084020",
+    "name": "ARK-NZ King Cold Smoked Salmon Slice",
+    "category": "Salmon",
+    "packing": "30ea x 100 g",
+    "img": "images/SMX0084020.webp?v=2",
+    "back": "images/SMX0084020-back.webp"
+  },
+  {
+    "code": "SMX0001177",
+    "name": "Bakka Heimland Smoked Salmon Slice",
+    "category": "Salmon",
+    "packing": "10ea x 100 g",
+    "img": "images/SMX0001177.webp",
+    "back": "images/SMX0001177-back.webp?v=2"
+  },
+  {
+    "code": "SMX0051020",
+    "name": "Salmon Small Fin",
+    "category": "Salmon",
+    "packing": "20ea x 500g",
+    "img": "images/SMX0051020.webp?v=1",
+    "back": "images/SMX0051020-back.webp?v=1"
+  },
+  {
+    "code": "SMX0016SFZ",
+    "name": "Serve Atlantic Salmon S-Cut Portion",
+    "category": "Salmon",
+    "packing": "60ea x 150 g",
+    "img": "images/SMX0016SFZ.webp?v=2",
+    "back": "images/SMX0016SFZ-back.webp?v=2"
+  },
+  {
+    "code": "SMX0017SFZ",
+    "name": "UL Serve Atlantic Salmon S-Cut Ptn",
+    "category": "Salmon",
+    "packing": "60ea x 150 g",
+    "img": "images/SMX0017SFZ.webp?v=5",
+    "back": "images/SMX0017SFZ-back.webp?v=5"
+  },
+  {
+    "code": "SMX0059020",
+    "name": "Bakkafrost Salmon Square Portion",
+    "category": "Salmon",
+    "packing": "50ea x 150 g",
+    "img": "images/SMX0059020.webp?v=2",
+    "back": "images/SMX0059020-back.webp?v=1"
+  },
+  {
+    "code": "PM-SMX0002OEM",
+    "name": "PM-Atlantic Salmon Ptn",
+    "category": "Salmon",
+    "packing": "VP, 2s x 150g, 30ea x 300 g",
+    "img": "images/PM-SMX0002OEM.webp?v=1",
+    "back": "images/PM-SMX0002OEM-back.webp?v=1"
+  },
+  {
+    "code": "SMX1011020",
+    "name": "Atlantic Salmon Portion S-Cut",
+    "category": "Salmon",
+    "packing": "60ea x 150 g",
+    "img": "images/SMX1011020.webp?v=1",
+    "back": "images/SMX1011020-back.webp?v=1"
+  },
+  {
+    "code": "CRX0001SFZ",
+    "name": "UL Serve Crimson Snapper GGS",
+    "category": "Red Snapper",
+    "packing": "15ea x 400 g",
+    "img": "images/CRX0001SFZ.webp?v=2",
+    "back": "images/CRX0001SFZ-back.webp?v=2"
+  },
+  {
+    "code": "CRX0010020",
+    "name": "Crimson Snapper Portion",
+    "category": "Red Snapper",
+    "packing": "180/220g, IVP, 1x50ea",
+    "img": "images/CRX0010020.webp?v=1",
+    "back": "images/CRX0010020-back.webp?v=1"
+  },
+  {
+    "code": "RSX0003SFZ",
+    "name": "UL Serve Red Snapper Ptn",
+    "category": "Red Snapper",
+    "packing": "TP, 2sx120g, 60eax240 g",
+    "img": "images/RSX0003SFZ.webp"
+  },
+  {
+    "code": "BAX0038020",
+    "name": "UL RM Barramundi S-Cut Portion",
+    "category": "Barramundi",
+    "packing": "60ea x 200 g",
+    "img": "images/BAX0038020.webp"
+  },
+  {
+    "code": "BAX0004SFZ",
+    "name": "UL Serve Barramundi Fillet",
+    "category": "Barramundi",
+    "packing": "60ea x 240 g",
+    "img": "images/BAX0004SFZ.webp?v=2",
+    "back": "images/BAX0004SFZ-back.webp?v=1"
+  },
+  {
+    "code": "BAX0003SFZ",
+    "name": "UL Serve Barramundi Ptn",
+    "category": "Barramundi",
+    "packing": "TP, 2sx120g, 60eax240 g",
+    "img": "images/BAX0003SFZ.webp?v=1",
+    "back": "images/BAX0003SFZ-back.webp?v=1"
+  },
+  {
+    "code": "BAX0005SFZ",
+    "name": "UL Serve Barramundi Chunks",
+    "category": "Barramundi",
+    "packing": "60ea x 200 g",
+    "img": "images/BAX0005SFZ.webp?v=1",
+    "back": "images/BAX0005SFZ-back.webp?v=1"
+  },
+  {
+    "code": "FP-BAX0002C",
+    "name": "Barramundi Fillet",
+    "category": "Barramundi",
+    "packing": "Trim 2, SKLS Nett",
+    "img": "images/FP-BAX0002C.webp?v=1",
+    "back": "images/FP-BAX0002C-back.webp?v=1"
+  },
+  {
+    "code": "BAX0048020",
+    "name": "Barramundi Fillet 180/200g",
+    "category": "Barramundi",
+    "packing": "IVP, 1 x 50 ea, NFW",
+    "img": "images/BAX0048020.webp?v=1",
+    "back": "images/BAX0048020-back.webp?v=1"
+  },
+  {
+    "code": "BTW0003020",
+    "name": "Batang Head V-Cut Piece (W)",
+    "category": "Batang",
+    "packing": "5ea x 2 kg",
+    "img": "images/BTW0003020.webp?v=1",
+    "back": "images/BTW0003020-back.webp?v=1"
+  },
+  {
+    "code": "KS-BTX0001OEM",
+    "name": "KS-Batang Steak",
+    "category": "Batang",
+    "packing": "1ea x 1.4/1.5kg, 1ctn x 7ea",
+    "img": "images/KS-BTX0001OEM.webp?v=1"
+  },
+  {
+    "code": "BTX0038C",
+    "name": "Batang Small Slice",
+    "category": "Batang",
+    "packing": "1kg Pack",
+    "img": "images/BTX0038C.webp?v=1",
+    "back": "images/BTX0038C-back.webp?v=1"
+  },
+  {
+    "code": "BTW0002C",
+    "name": "Batang Slice",
+    "category": "Batang",
+    "packing": "1kg Pack",
+    "img": "images/BTW0002C-cover.webp?v=1",
+    "back": "images/BTW0002C.webp?v=1"
+  },
+  {
+    "code": "BTX0029020",
+    "name": "Batang Fillet, PBI",
+    "category": "Batang",
+    "packing": "IVP, 1Fillet/pkt, 9-11kg, NFW",
+    "img": "images/BTX0029020.webp?v=1",
+    "back": "images/BTX0029020-back.webp?v=1"
+  },
+  {
+    "code": "BTX0005SFZ",
+    "name": "UL Serve Batang Ptn",
+    "category": "Batang",
+    "packing": "TP, 2s x 120g, 60ea x 240 g",
+    "img": "images/BTX0005SFZ.webp?v=1",
+    "back": "images/BTX0005SFZ-back.webp?v=1"
+  },
+  {
+    "code": "BTX0044020",
+    "name": "Batang Steak",
+    "category": "Batang",
+    "packing": "120/140g, 1ea x 10pc, 10ea/ctn",
+    "img": "images/BTX0044020.webp"
+  },
+  {
+    "code": "BTX0004SFZ",
+    "name": "UL Serve Batang Round Steaks",
+    "category": "Batang",
+    "packing": "60ea x 240 g",
+    "img": "images/BTX0004SFZ.webp?v=1",
+    "back": "images/BTX0004SFZ-back.webp?v=1"
+  },
+  {
+    "code": "BTX0006020",
+    "name": "Batang Slice",
+    "category": "Batang",
+    "packing": "15ea x 200 g",
+    "img": "images/BTX0006020.webp?v=1",
+    "back": "images/BTX0006020-back.webp?v=1"
+  },
+  {
+    "code": "BTX0024020",
+    "name": "Batang Roe",
+    "category": "Batang",
+    "packing": "10ea x 1 kg",
+    "img": "images/BTX0024020.webp?v=1",
+    "back": "images/BTX0024020-back.webp?v=1"
+  },
+  {
+    "code": "AGX0002SFZ",
+    "name": "UL Serve Angoli Portion",
+    "category": "Angoli",
+    "packing": "ITP, 60ea x 150 g",
+    "img": "images/AGX0002SFZ.webp"
+  },
+  {
+    "code": "AGX0054020",
+    "name": "Angoli Steak",
+    "category": "Angoli",
+    "packing": "110/130g, 1ea x 10pc, 10ea/ctn",
+    "img": "images/AGX0054020.webp"
+  },
+  {
+    "code": "AGX0001SFZ",
+    "name": "UL Serve Angoli Steaks and Tails",
+    "category": "Angoli",
+    "packing": "60ea x 240 g",
+    "img": "images/AGX0001SFZ.webp?v=1",
+    "back": "images/AGX0001SFZ-back.webp?v=1"
+  },
+  {
+    "code": "AGX0007020",
+    "name": "Angoli Head S-Cut Half",
+    "category": "Angoli",
+    "packing": "GGS 500/600g, 1x10ea, NFW",
+    "img": "images/AGX0007020.webp?v=1",
+    "back": "images/AGX0007020-back.webp?v=1"
+  },
+  {
+    "code": "AGX0028020",
+    "name": "Angoli Head S-Cut Half",
+    "category": "Angoli",
+    "packing": "GGS 400/500g, 1x10ea, NFW",
+    "img": "images/AGX0028020.webp?v=1",
+    "back": "images/AGX0028020-back.webp?v=1"
+  },
+  {
+    "code": "FP-AGX0002C",
+    "name": "Angoli Fillet",
+    "category": "Angoli",
+    "packing": "0.5/1.5 kg (Trim 1) Nett",
+    "img": "images/FP-AGX0002C.webp?v=1",
+    "back": "images/FP-AGX0002C-back.webp?v=1",
+    "keywords": "912172"
+  },
+  {
+    "code": "KS-AGX0001OEM",
+    "name": "KS-Angoli Steak",
+    "category": "Angoli",
+    "packing": "1ea x 1.4/1.5kg, 1ctn x 7 ea",
+    "img": "images/KS-AGX0001OEM.webp?v=1"
+  },
+  {
+    "code": "SJX0001094",
+    "name": "Halibut Fillet SKLS",
+    "category": "Halibut",
+    "packing": "400/800g, 1 x 10 kg",
+    "img": "images/SJX0001094.webp"
+  },
+  {
+    "code": "SJX0007020",
+    "name": "Halibut S-Cut Portion 140/160g",
+    "category": "Halibut",
+    "packing": "1 x 60ea, NFW",
+    "img": "images/SJX0007020.webp?v=1",
+    "back": "images/SJX0007020-back.webp?v=1"
+  },
+  {
+    "code": "SJX0006020",
+    "name": "Halibut Off-Cuts",
+    "category": "Halibut",
+    "packing": "IVP, 20ea x 500 g",
+    "img": "images/SJX0006020.webp?v=2"
+  },
+  {
+    "code": "LJX0003020",
+    "name": "Leather Jacket Steak 100/150g",
+    "category": "Leather Jacket",
+    "packing": "4ea x 2.5 kg",
+    "img": "images/LJX0003020.webp?v=1",
+    "back": "images/LJX0003020-back.webp?v=1"
+  },
+  {
+    "code": "MFX0003SFZ",
+    "name": "UL Serve Milkfish GGS",
+    "category": "Milkfish",
+    "packing": "30ea x 400 g",
+    "img": "images/MFX0003SFZ.webp?v=1",
+    "back": "images/MFX0003SFZ-back.webp?v=2"
+  },
+  {
+    "code": "BPX0001SFZ",
+    "name": "Serve Black Pomfret GGS",
+    "category": "Black Pomfret",
+    "packing": "15ea x 250 g",
+    "img": "images/BPX0001SFZ.webp?v=2",
+    "back": "images/BPX0001SFZ-back.webp?v=2"
+  },
+  {
+    "code": "CPX0001SFZ",
+    "name": "UL Serve Chinese Pomfret GGS",
+    "category": "Chinese Pomfret",
+    "packing": "20ea x 400 g",
+    "img": "images/CPX0001SFZ.webp?v=1",
+    "back": "images/CPX0001SFZ-back.webp?v=1"
+  },
+  {
+    "code": "GPX0002SFZ",
+    "name": "UL Serve Golden Pomfret GGS",
+    "category": "Golden Pomfret",
+    "packing": "15ea x 350 g",
+    "img": "images/GPX0002SFZ.webp?v=6",
+    "back": "images/GPX0002SFZ-back.webp?v=2"
+  },
+  {
+    "code": "GPX0004020",
+    "name": "Golden Pomfret Slice",
+    "category": "Golden Pomfret",
+    "packing": "10ea x 1 kg",
+    "img": "images/GPX0004020.webp?v=3",
+    "back": "images/GPX0004020-back.webp?v=1"
+  },
+  {
+    "code": "GUX0015020",
+    "name": "Grouper Slice",
+    "category": "Grouper",
+    "packing": "10ea x 1 kg",
+    "img": "images/GUX0015020.webp?v=1",
+    "back": "images/GUX0015020-back.webp?v=1"
+  },
+  {
+    "code": "TFX0003SFZ",
+    "name": "UL Serve Threadfin Ptn",
+    "category": "Threadfin",
+    "packing": "TP, 2sx100g, 60ea x 200 g",
+    "img": "images/TFX0003SFZ.webp?v=3"
+  },
+  {
+    "code": "SB-SRX0001158",
+    "name": "SB-Sutchi Cut Cube",
+    "category": "Sutchi",
+    "packing": "20/30g, 10ea x 1 kg",
+    "img": "images/SB-SRX0001158.webp"
+  },
+  {
+    "code": "SRX0006158",
+    "name": "Sutchi Cut Cube",
+    "category": "Sutchi",
+    "packing": "20/30g, 10ea x 1 kg",
+    "img": "images/SRX0006158.webp"
+  },
+  {
+    "code": "TOX0013148",
+    "name": "Snake Head Slice",
+    "category": "Toman",
+    "packing": "10/15g, 40ea x 200 g",
+    "img": "images/TOX0013148.webp"
+  },
+  {
+    "code": "TOX0003SFZ",
+    "name": "UL Serve Toman Slice",
+    "category": "Toman",
+    "packing": "60ea x 200 g",
+    "img": "images/TOX0003SFZ.webp"
+  },
+  {
+    "code": "HK-TOX0002OEM",
+    "name": "HK-Toman Slice",
+    "category": "Toman",
+    "packing": "SP, 12ea x 140 g",
+    "img": "images/HK-TOX0002OEM.webp?v=1"
+  },
+  {
+    "code": "FP-CGX0002C",
+    "name": "Conger Eel Fillet",
+    "category": "Conger Eel",
+    "packing": "912354",
+    "img": "images/FP-CGX0002C.webp?v=2",
+    "back": "images/FP-CGX0002C-back.webp?v=2"
+  },
+  {
+    "code": "ST-SXX0001OEM",
+    "name": "ST-Snow Crab Claw",
+    "category": "Crab",
+    "packing": "36/40, 1ea x 9pc, 30ea x 250 g",
+    "img": "images/ST-SXX0001OEM.webp?v=5"
+  },
+  {
+    "code": "STX0018020",
+    "name": "Stingray Cut Square",
+    "category": "Stingray",
+    "packing": "130/160g, 1ea x 10pc, 6ea/ctn",
+    "img": "images/STX0018020.webp"
+  },
+  {
+    "code": "HMX0001020",
+    "name": "XL Fish Roe",
+    "category": "Fish Roe",
+    "packing": "TP, 9-11 kg",
+    "img": "images/HMX0001020.webp"
+  },
+  {
+    "code": "CEX0058020",
+    "name": "Black Cod Portion PBI",
+    "category": "Black Cod",
+    "packing": "50ea x 150 g",
+    "img": "images/CEX0058020.webp?v=1",
+    "back": "images/CEX0058020-back.webp?v=1"
+  },
+  {
+    "code": "CEX0059020",
+    "name": "Black Cod Portion PBI",
+    "category": "Black Cod",
+    "packing": "VP, 20ea x 450 g",
+    "img": "images/CEX0059020.webp?v=1",
+    "back": "images/CEX0059020-back.webp?v=1"
+  }
+]
