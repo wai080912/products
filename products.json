@@ -542,5 +542,13 @@
     "packing": "10ea x 1 kg",
     "img": "images/RGX0028020.webp",
     "back": "images/RGX0028020-back.webp"
+  },
+  {
+    "code": "FP-SOX0001C",
+    "name": "Sole Fillet L (Trim2, SKLS) Nett",
+    "category": "Sole",
+    "packing": "(912437)",
+    "img": "images/FP-SOX0001C.webp",
+    "back": "images/FP-SOX0001C-back.webp"
   }
 ]
