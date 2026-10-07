@@ -558,5 +558,13 @@
     "packing": "60ea x 240 g",
     "img": "images/SOX0001SFZ.webp",
     "back": "images/SOX0001SFZ-back.webp"
+  },
+  {
+    "code": "PM-SQX0001OEM",
+    "name": "PM-Squid WR",
+    "category": "Squid",
+    "packing": "24ea x 450 g",
+    "img": "images/PM-SQX0001OEM.webp",
+    "back": "images/PM-SQX0001OEM-back.webp"
   }
 ]
