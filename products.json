@@ -550,5 +550,13 @@
     "packing": "(912437)",
     "img": "images/FP-SOX0001C.webp",
     "back": "images/FP-SOX0001C-back.webp"
+  },
+  {
+    "code": "SOX0001SFZ",
+    "name": "UL Serve Sole Fish SKLS Fillet",
+    "category": "Sole",
+    "packing": "60ea x 240 g",
+    "img": "images/SOX0001SFZ.webp",
+    "back": "images/SOX0001SFZ-back.webp"
   }
 ]
