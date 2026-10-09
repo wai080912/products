@@ -632,6 +632,14 @@
     "back": "images/LF-SMX0001C-back.webp?v=1"
   },
   {
+    "code": "LF-SMX0002C",
+    "name": "LF-Tasmanian Salmon Fillet Trim C",
+    "category": "Salmon",
+    "packing": "IVP, 5ea/ctn, NFW",
+    "img": "images/LF-SMX0002C.webp?v=1",
+    "back": "images/LF-SMX0002C-back.webp?v=1"
+  },
+  {
     "code": "SMX0011SFZ",
     "name": "UL Serve Salmon SKLS Belly",
     "category": "Salmon",
