@@ -536,13 +536,6 @@
     "back": "images/P65-RGW0001OEM-back.webp"
   },
   {
-    "code": "RGX0019020",
-    "name": "Red Grouper Slice",
-    "category": "Red Grouper",
-    "packing": "15ea x 200 g",
-    "img": "images/RGX0019020.webp"
-  },
-  {
     "code": "RGX0028020",
     "name": "Red Grouper Slice",
     "category": "Red Grouper",
@@ -629,14 +622,6 @@
     "packing": "1/2kg (NFW)",
     "img": "images/SMX0070C.webp",
     "back": "images/SMX0070C-back.webp"
-  },
-  {
-    "code": "LF-SMX0001C",
-    "name": "LF-Tasmanian Salmon Portion",
-    "category": "Salmon",
-    "packing": "IVP, 5ea x 200 g",
-    "img": "images/LF-SMX0001C.webp?v=1",
-    "back": "images/LF-SMX0001C-back.webp?v=1"
   },
   {
     "code": "SMX0011SFZ",
