@@ -536,6 +536,13 @@
     "back": "images/P65-RGW0001OEM-back.webp"
   },
   {
+    "code": "RGX0019020",
+    "name": "Red Grouper Slice",
+    "category": "Red Grouper",
+    "packing": "15ea x 200 g",
+    "img": "images/RGX0019020.webp"
+  },
+  {
     "code": "RGX0028020",
     "name": "Red Grouper Slice",
     "category": "Red Grouper",
