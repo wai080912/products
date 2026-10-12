@@ -646,5 +646,12 @@
     "packing": "60ea x 200 g",
     "img": "images/SMX0011SFZ.webp",
     "back": "images/SMX0011SFZ-back.webp"
+  },
+  {
+    "code": "LF-SMX0002C",
+    "name": "LF Tasmanian Salmon Fillet Trim C",
+    "category": "Salmon",
+    "packing": "Little Farms",
+    "img": "images/LF-SMX0002C.webp"
   }
 ]
