@@ -241,6 +241,13 @@
     "img": "images/BTX0044020.webp"
   },
   {
+    "code": "BTX0039020",
+    "name": "Batang Steak",
+    "category": "Batang",
+    "packing": "100/120g (4ea x 2.7 kg)",
+    "img": "images/BTX0039020.webp"
+  },
+  {
     "code": "BTX0004SFZ",
     "name": "UL Serve Batang Round Steaks",
     "category": "Batang",
@@ -253,8 +260,8 @@
     "name": "Batang Slice",
     "category": "Batang",
     "packing": "15ea x 200 g",
-    "img": "images/BTX0006020.webp?v=1",
-    "back": "images/BTX0006020-back.webp?v=1"
+    "img": "images/BTX0006020.webp?v=2",
+    "back": "images/BTX0006020-back.webp?v=2"
   },
   {
     "code": "BTX0024020",
