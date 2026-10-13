@@ -355,6 +355,14 @@
     "img": "images/LF-SJX0001OEM.webp?v=1"
   },
   {
+    "code": "LF-SJX0001C",
+    "name": "LF-Halibut Portion",
+    "category": "Halibut",
+    "packing": "5ea x 150 g",
+    "img": "images/LF-SJX0001C.webp",
+    "back": "images/LF-SJX0001C-back.webp"
+  },
+  {
     "code": "LJX0003020",
     "name": "Leather Jacket Steak 100/150g",
     "category": "Leather Jacket",
@@ -502,7 +510,8 @@
     "name": "LF-Black Cod Portion",
     "category": "Black Cod",
     "packing": "50ea x 150g",
-    "img": "images/LF-CEX0001OEM.webp?v=1"
+    "img": "images/LF-CEX0001OEM.webp?v=2",
+    "back": "images/LF-CEX0001OEM-back.webp?v=2"
   },
   {
     "code": "VPX0037032",
