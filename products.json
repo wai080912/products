@@ -521,6 +521,14 @@
     "back": "images/LF-CEX0001OEM-back.webp?v=2"
   },
   {
+    "code": "CEX0013020",
+    "name": "Chilean Seabass Fillet",
+    "category": "Chilean Seabass",
+    "packing": "0.8/1.6kg (IVP,16-18kg,NFW)",
+    "img": "images/CEX0013020.webp",
+    "back": "images/CEX0013020-back.webp"
+  },
+  {
     "code": "VPX0037032",
     "name": "Vannamei Prawn HOSO 16/20",
     "category": "Vannamei Prawn",
