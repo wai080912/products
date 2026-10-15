@@ -207,7 +207,8 @@
   "category": "Batang",
   "packing": "1kg Pack",
   "img": "images/BTX0038C.webp?v=1",
-  "back": "images/BTX0038C-back.webp?v=1"
+  "back": "images/BTX0038C-back.webp?v=1",
+  "third": "images/BTX0038C-back.webp"
  },
  {
   "code": "BTW0002C",
@@ -424,7 +425,8 @@
   "category": "Golden Pomfret",
   "packing": "10ea x 1 kg",
   "img": "images/GPX0004020.webp?v=3",
-  "back": "images/GPX0004020-back.webp?v=1"
+  "back": "images/GPX0004020-back.webp?v=1",
+  "third": "images/GPX0004020-back.webp"
  },
  {
   "code": "GUX0015020",
@@ -432,7 +434,8 @@
   "category": "Grouper",
   "packing": "10ea x 1 kg",
   "img": "images/GUX0015020.webp?v=1",
-  "back": "images/GUX0015020-back.webp?v=1"
+  "back": "images/GUX0015020-back.webp?v=1",
+  "third": "images/GUX0015020-back.webp"
  },
  {
   "code": "TFX0003SFZ",
