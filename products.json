@@ -216,7 +216,8 @@
   "category": "Batang",
   "packing": "1kg Pack",
   "img": "images/BTW0002C-cover.webp?v=1",
-  "back": "images/BTW0002C.webp?v=1"
+  "back": "images/BTW0002C.webp?v=1",
+  "third": "images/BTW0002C.webp"
  },
  {
   "code": "BTX0029020",
