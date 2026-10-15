@@ -284,7 +284,8 @@
   "category": "Batang",
   "packing": "1kg Pack",
   "img": "images/BTX0040C.webp",
-  "back": "images/BTX0040C-back.webp"
+  "back": "images/BTX0040C-back.webp",
+  "third": "images/BTX0040C-3rd.webp"
  },
  {
   "code": "AGX0002SFZ",
