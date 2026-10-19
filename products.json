@@ -207,7 +207,7 @@
   "category": "Batang",
   "packing": "1kg Pack",
   "img": "images/BTX0038C.webp?v=1",
-  "back": "images/BTX0038C-back.webp?v=1",
+  "back": "images/BTX0038C-back.webp",
   "third": "images/BTX0038C-back.webp"
  },
  {
@@ -216,7 +216,7 @@
   "category": "Batang",
   "packing": "1kg Pack",
   "img": "images/BTW0002C-cover.webp?v=1",
-  "back": "images/BTW0002C.webp?v=1",
+  "back": "images/BTW0002C-back.webp",
   "third": "images/BTW0002C.webp"
  },
  {
