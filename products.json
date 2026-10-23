@@ -683,5 +683,14 @@
   "packing": "60ea x 200 g",
   "img": "images/SMX0011SFZ.webp",
   "back": "images/SMX0011SFZ-back.webp"
+ },
+ {
+  "code": "FP-TOX0001OEM",
+  "name": "UL FP-Toman Slice",
+  "category": "Toman",
+  "packing": "30ea x 200 g",
+  "img": "images/FP-TOX0001OEM.webp",
+  "back": "images/FP-TOX0001OEM-back.webp",
+  "keywords": "13257475"
  }
 ]
