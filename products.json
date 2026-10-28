@@ -700,5 +700,13 @@
   "packing": "0.65/1kg, VP, 1ctn x 5ea",
   "img": "images/TTX0003020.webp",
   "back": "images/TTX0003020-back.webp"
+ },
+ {
+  "code": "SMX0021020",
+  "name": "NZ King Salmon Chunks",
+  "category": "NZ Salmon",
+  "packing": "TP, 15ea x 200 g",
+  "img": "images/SMX0021020.webp",
+  "back": "images/SMX0021020-back.webp"
  }
 ]
