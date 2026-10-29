@@ -716,5 +716,13 @@
   "packing": "SP, 60ea x 160 g",
   "img": "images/P65-AKW0001OEM.webp",
   "back": "images/P65-AKW0001OEM-back.webp"
+ },
+ {
+  "code": "STX0019020",
+  "name": "Stingray BBQ Steak",
+  "category": "Stingray",
+  "packing": "200/250g (1ea x 5pc, 8ea/ctn)",
+  "img": "images/STX0019020.webp",
+  "back": "images/STX0019020-back.webp"
  }
 ]
