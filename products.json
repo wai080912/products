@@ -708,5 +708,13 @@
   "packing": "TP, 15ea x 200 g",
   "img": "images/SMX0021020.webp",
   "back": "images/SMX0021020-back.webp"
+ },
+ {
+  "code": "P65-AKW0001OEM",
+  "name": "P65-King Prawn PTO",
+  "category": "Prawn",
+  "packing": "SP, 60ea x 160 g",
+  "img": "images/P65-AKW0001OEM.webp",
+  "back": "images/P65-AKW0001OEM-back.webp"
  }
 ]
