@@ -22,6 +22,14 @@ body{font-family:Inter,-apple-system,"Segoe UI",sans-serif;background:var(--bg);
 .bar{position:sticky;top:0;z-index:20;background:rgba(244,248,251,.92);backdrop-filter:blur(12px);border-bottom:1px solid #dbe7ee}
 .pills{display:flex;gap:10px;overflow-x:auto;padding:14px 18px;scrollbar-width:none}
 .pills::-webkit-scrollbar{display:none}
+/* 电脑用鼠标也要拉得到右边（2026-10-29）：30 个分类按钮一排约 3,587px，1,400px 宽的屏幕只放得下四成；
+   滚动条藏着、滚轮又只会上下走，鼠标根本拉不到。用鼠标的才露出滚动条、能按住拖；手机照旧手指滑。 */
+@media (hover:hover) and (pointer:fine){
+.pills{scrollbar-width:thin;scrollbar-color:var(--navy) transparent;cursor:grab;user-select:none}
+.pills::-webkit-scrollbar{display:block;height:10px}
+.pills::-webkit-scrollbar-thumb{background:var(--navy);border-radius:999px}
+.pills.dragging{cursor:grabbing}
+}
 .pill{flex:0 0 auto;font-size:15px;font-weight:500;padding:10px 22px;border-radius:999px;border:1px solid #cfdfe9;background:#fff;color:var(--ink);cursor:pointer;transition:.2s}
 .pill.on{background:var(--navy);border-color:var(--navy);color:#fff}
 .flip{display:none;justify-content:center;gap:10px;padding:16px 26px 0}
@@ -113,6 +121,19 @@ count.textContent=v?v+' of '+cards.length+' products':'';
 empty.style.display=v?'none':'block';}
 q.addEventListener('input',go);
 document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;go()});
+/* 鼠标在分类那一排上：滚轮上下 = 这一排左右走，走到头才让整页滚；按住拖也拉得动（2026-10-29）。
+   拖超过 6px 才算拖，拖完放手那一下不当成点了分类。手指滑的不走这段（只认 mouse）。 */
+pillBox.addEventListener('wheel',e=>{
+if(e.ctrlKey||Math.abs(e.deltaX)>=Math.abs(e.deltaY))return;
+const max=pillBox.scrollWidth-pillBox.clientWidth;if(max<=0)return;
+const d=e.deltaMode===1?e.deltaY*40:e.deltaY;
+if((d<0&&pillBox.scrollLeft<=0)||(d>0&&pillBox.scrollLeft>=max-1))return;
+pillBox.scrollLeft+=d;e.preventDefault()},{passive:false});
+let drag=null,dragged=false;
+pillBox.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;drag={x:e.clientX,left:pillBox.scrollLeft};dragged=false});
+window.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x;if(!dragged&&Math.abs(dx)<6)return;dragged=true;pillBox.classList.add('dragging');pillBox.scrollLeft=drag.left-dx});
+window.addEventListener('pointerup',()=>{if(!drag)return;drag=null;pillBox.classList.remove('dragging')});
+pillBox.addEventListener('click',e=>{if(dragged){e.stopPropagation();e.preventDefault();dragged=false}},true);
 const modal=document.getElementById('modal'),mimg=document.getElementById('mimg'),
 flip=document.getElementById('flip'),bfront=document.getElementById('bfront'),bback=document.getElementById('bback'),bthird=document.getElementById('bthird');
 /* 第三张图（products.json 的 third，2026-10-15 BTX0040C 起）：有才出按钮，没有的跟以前一样。
