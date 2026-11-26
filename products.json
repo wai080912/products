@@ -733,5 +733,21 @@
     "img": "images/SMX0001185.webp",
     "back": "images/SMX0001185-back.webp",
     "third": "images/SMX0001185-3rd.webp"
+  },
+  {
+    "code": "BAX0006SFZ",
+    "name": "UL Serve Barramundi GGS",
+    "category": "Barramundi",
+    "packing": "15ea x 480 g",
+    "img": "images/BAX0006SFZ.webp",
+    "back": "images/BAX0006SFZ-back.webp"
+  },
+  {
+    "code": "GPX0004SFZ",
+    "name": "Serve Golden Pomfret GGS",
+    "category": "Golden Pomfret",
+    "packing": "15ea x 350 g",
+    "img": "images/GPX0004SFZ.webp",
+    "back": "images/GPX0004SFZ-back.webp"
   }
 ]
